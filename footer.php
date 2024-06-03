@@ -2,7 +2,7 @@
     <div class="container relative">
 
         <div class="sofa-img">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/sofa.png" alt="Image" class="img-fluid">
+            <img src="http://localhost/kajal-dev/custom-theme/wp-content/uploads/2024/06/sofa.png" alt="Image" class="img-fluid">
         </div>
 
         <div class="row">
@@ -10,7 +10,7 @@
                 <div class="subscription-form">
                     <h3 class="d-flex align-items-center">
                         <span class="me-1">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/envelope-outline.svg" alt="Image" class="img-fluid">
+                            <img src="http://localhost/kajal-dev/custom-theme/wp-content/uploads/2024/06/envelope-outline.svg" alt="Image" class="img-fluid">
                         </span>
                         <span>Subscribe to Newsletter</span>
                     </h3>

@@ -21,7 +21,4 @@ function register_my_menu() {
 }
 add_action('init', 'register_my_menu');
 
-// Ensure skip link is enqueued for accessibility
-if (function_exists('wp_enqueue_block_template_skip_link')) {
-    add_action('wp_enqueue_scripts', 'wp_enqueue_block_template_skip_link');
-}
+
