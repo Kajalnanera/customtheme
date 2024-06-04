@@ -9,6 +9,7 @@
   <meta name="description" content="" />
   <meta name="keywords" content="bootstrap, bootstrap4" />
   <?php wp_head(); ?> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -32,8 +33,8 @@
         ?>
 
         <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-          <li><a class="nav-link" href="#"><img src="<?php get_field('user_header_image');?>"></a></li>
-          <li><a class="nav-link" href="cart.html"><img src="http://localhost/kajal-dev/custom-theme/wp-content/uploads/2024/06/cart.svg"></a></li>
+          <li><a class="nav-link" href="#"><img src="<?php echo get_field('header-user', 'option');?>"></a></li>
+          <li><a class="nav-link" href="#"><img src="<?php echo get_field('header-cart', 'option');?>"></a></li>
         </ul>
       </div>
     </div>
