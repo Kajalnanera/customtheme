@@ -149,7 +149,7 @@ a {
       position: absolute;
       width: 255px;
       height: 217px;
-      background-image: url("../images/dots-light.svg");
+      background-image: url("http://localhost/kajal-dev/Custom%20Theme/wp-content/uploads/2024/06/dots-light.svg");
       background-size: contain;
       background-repeat: no-repeat;
       right: -100px;
@@ -709,3 +709,22 @@ textarea {
     height: 50px;
     border-radius: 50%;
     background: rgba(59, 93, 80, 0.2); }
+
+/* extra css */
+.wpcf7 .submit-btn p::before {
+  content: "";
+  font-family: "FontAwesome";
+  display: inline-block;
+  font-size: 1rem; /* Adjust icon size as needed */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "\f1d8"; /* Font Awesome code for paper-plane */
+}
+ul#menu-menu-1 .menu-item a {
+  text-decoration: none;
+  padding: 10px;
+}
+.wpcf7-submit {
+  font-family: FontAwesome !important;
+  }
