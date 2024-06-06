@@ -711,20 +711,14 @@ textarea {
     background: rgba(59, 93, 80, 0.2); }
 
 /* extra css */
-.wpcf7 .submit-btn p::before {
-  content: "";
-  font-family: "FontAwesome";
-  display: inline-block;
-  font-size: 1rem; /* Adjust icon size as needed */
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  content: "\f1d8"; /* Font Awesome code for paper-plane */
-}
 ul#menu-menu-1 .menu-item a {
   text-decoration: none;
   padding: 10px;
 }
-.wpcf7-submit {
+.footer-form .wpcf7-submit {
   font-family: FontAwesome !important;
+  }
+.service .service-contents a {
+    color: #6a6a6a; !important;
+    text-decoration: none !important;
   }

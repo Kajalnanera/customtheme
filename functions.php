@@ -30,8 +30,9 @@ function register_footer_menus() {
 }
 add_action( 'init', 'register_footer_menus' );
 
-
-add_action('after_setup_theme', 'enable_featured_images_for_posts');
-function enable_featured_images_for_posts() {
-    add_theme_support('post-thumbnails', array('post'));
+function my_theme_setup() {
+    add_theme_support( 'post-thumbnails' );
 }
+add_action( 'after_setup_theme', 'my_theme_setup' );
+
+
