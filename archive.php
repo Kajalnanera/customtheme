@@ -20,7 +20,7 @@ get_header();
                 the_post();
                 
                 // Check for custom post type and load the corresponding template part
-                if ( get_post_type() == 'your_custom_post_type' ) {
+                if ( get_post_type() == 'Team' ) {
                     get_template_part( 'template-parts/content', 'your_custom_post_type' );
                 } else {
                     get_template_part( 'template-parts/content', get_post_type() );

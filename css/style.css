@@ -722,3 +722,16 @@ ul#menu-menu-1 .menu-item a {
     color: #6a6a6a; !important;
     text-decoration: none !important;
   }
+  .content-area {
+    display: flex;
+}
+
+.sidebar {
+    order: -1;
+    width: 25%; /* Adjust width as needed */
+}
+
+.site-main {
+    width: 75%; /* Adjust width as needed */
+    padding-left: 20px; /* Add space between the sidebar and main content */
+}
