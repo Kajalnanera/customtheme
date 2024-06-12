@@ -1,4 +1,4 @@
-<?php /* Template Name: services page */ 
+<?php
 get_header();  // Includes header.php
 ?>
 
@@ -94,9 +94,6 @@ get_header();  // Includes header.php
         <?php endif; ?>
     <?php endwhile; ?>
 <?php endif; ?>
-
-                
-
 					<!-- End Column 1 -->
 
 					<!-- Start Column 2 -->
