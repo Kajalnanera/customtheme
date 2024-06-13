@@ -1,44 +1,63 @@
 <?php
-get_header();  // Includes header.php
+get_header();
 ?>
 
-<main class="site-main">
-    <div class="container">
-        <!-- Your main content goes here -->
-        <?php
-        if ( have_posts() ) :
-            while ( have_posts() ) : the_post();?>
-            <div class="row my-5">
-            <?php if( have_rows('page_content') ): ?>
-                <?php while( have_rows('page_content') ): the_row(); ?>
-                    <?php if( get_row_layout() == 'team_section' ): 
-                        get_template_part('sections/services-section');
-                    endif; ?>
-                <?php endwhile; ?>
-            <?php endif; ?>
-        </div>
-        <!-- Start Product Section -->
-		<div class="product-section pt-0">
-			<div class="container">
-				<div class="row">
+<div class="content">
+    <?php
+    // Check if the flexible content field has content
+    if (have_rows('page_content')):
 
-					<!-- Start Column 1 -->
-                    <?php if( have_rows('page_content') ): ?>
-    <?php while( have_rows('page_content') ): the_row(); ?>
-        <?php if( get_row_layout() == 'products_list' ): 
-            get_template_part('sections/products-list');
-        endif; ?>
-    <?php endwhile; ?>
-<?php endif; ?>
+        // Loop through the rows of data
+        while (have_rows('page_content')): the_row();
 
-           <?php endwhile;
-        else :
-            echo '<p>No posts found</p>';
-        endif;
-        ?>
-    </div>
-</main>
+            // Hero Section
+            if (get_row_layout() == 'hero_section'):
+                get_template_part('sections/hero-section');
 
-<?php
-get_footer();  // Includes footer.php
-?>
+            // Products Section
+            elseif (get_row_layout() == 'products_section'):
+                get_template_part('sections/products-section');
+
+            // Why choose us Section
+            elseif (get_row_layout() == 'why_choose_us_section'):
+                get_template_part('sections/why-choose-us-sec');
+
+            // We Help Section
+            elseif (get_row_layout() == 'we_help_section'):
+                get_template_part('sections/we-help-section');  
+
+            // Product details Section
+            elseif (get_row_layout() == 'product_details_section'):
+                get_template_part('sections/product-details-sec');  
+
+            // Testimonials Section
+            elseif (get_row_layout() == 'testimonials'):
+                get_template_part('sections/testimonial');
+
+            // Blog Section
+            elseif (get_row_layout() == 'blog_section'):
+                get_template_part('sections/blog-section');
+
+            // Team Section
+            elseif (get_row_layout() == 'team_section'):
+                get_template_part('sections/team-section');
+
+            // Contact Section
+            elseif (get_row_layout() == 'contact_details'):
+                get_template_part('sections/contact-details');
+
+            // Add more sections as needed
+            endif;
+
+        endwhile;
+
+    else:
+
+        // No layouts found
+        echo '<p>No content found</p>';
+
+    endif;
+    ?>
+</div>
+
+<?php get_footer(); ?>
