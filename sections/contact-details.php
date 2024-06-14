@@ -18,7 +18,7 @@
                       </svg>
                     </div> <!-- /.icon -->
                     <div class="service-contents">
-                      <p><?php echo get_field('contact_address');?></p>
+                      <p><?php echo get_sub_field('contact_address');?></p>
                     </div> <!-- /.service-contents-->
                   </div> <!-- /.service -->
                 </div>
@@ -32,13 +32,13 @@
                     </div> <!-- /.icon -->
                     <div class="service-contents">
                       <?php
-                        $email_link = get_field('contact_email');
+                        $email_link = get_sub_field('contact_email');
 
                         if ($email_link) {
                             $email_url = $email_link['url'];
                             $email_text = $email_link['title'];
                             $email_target = $email_link['target'] ? $email_link['target'] : '_self';
-                            echo '<p><a href="' . esc_url($email_url) . '" target="' . esc_attr($email_target) . '">' . esc_html($email_text) . '</a></p>';
+                            echo '<p><a href="' . esc_url($email_url) . '" target="' . esc_attr($email_target) . '">' . $email_text . '</a></p>';
                         }
                         ?> <!-- /.service-contents-->
                   </div> <!-- /.service -->
@@ -54,13 +54,13 @@
                     </div> <!-- /.icon -->
                     <div class="service-contents">
                     <?php
-                        $contact = get_field('contact-number');
+                        $contact = get_sub_field('contact-number');
 
                         if ($contact) {
                             $contact_url = $contact['url'];
                             $contact_text = $contact['title'];
                             $contact_target = $contact['target'] ? $contact['target'] : '_self';
-                            echo '<p><a href="' . esc_url($contact_url) . '" target="' . esc_attr($contact_target) . '">' . esc_html($contact_text) . '</a></p>';
+                            echo '<p><a href="' . esc_url($contact_url) . '" target="' . esc_attr($contact_target) . '">' . $contact_text . '</a></p>';
                         }
                         ?>
                     </div> <!-- /.service-contents-->

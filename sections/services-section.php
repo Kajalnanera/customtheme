@@ -9,7 +9,7 @@
                                     <div class="icon">
                                         <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" class="img-fluid">
                                     </div>
-                                    <h3><?php echo esc_html($title); ?></h3>
+                                    <h3><?php echo $title; ?></h3>
                                     <p><?php echo $description; ?></p>
                                 </div>
                             </div>

@@ -3,8 +3,8 @@
 			<div class="container">
 				<div class="row justify-content-between">
 					<div class="col-lg-6">
-						<h2 class="section-title"><?php echo get_field('why_choose_us_title');?></h2>
-						<p><?php echo get_field('why_choose_us_desc');?></p>
+						<h2 class="section-title"><?php echo get_sub_field('why_choose_us_title');?></h2>
+						<p><?php echo get_sub_field('why_choose_us_desc');?></p>
 
 						<?php if( have_rows('why_choose_us') ): ?>
                             <div class="row my-5">
@@ -22,7 +22,7 @@
                                                 <img src="path/to/default-icon.jpg" alt="Default Icon" class="img-fluid">
                                             <?php endif; ?>
                                         </div>
-                                        <h3><?php echo esc_html($icon_title); ?></h3>
+                                        <h3><?php echo $icon_title; ?></h3>
                                         <p><?php echo $icon_description; ?></p>
                                     </div>
                                 </div>
@@ -34,7 +34,7 @@
 
 					<div class="col-lg-5">
 						<div class="img-wrap">
-							<img src="<?php echo get_field('why_choose_us_image');?>" alt="Image" class="img-fluid">
+							<img src="<?php echo get_sub_field('why_choose_us_image');?>" alt="Image" class="img-fluid">
 						</div>
 					</div>
 

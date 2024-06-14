@@ -3,7 +3,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-7 mx-auto text-center">
-						<h2 class="section-title"><?php echo get_field('testimonial_heading');?></h2>
+						<h2 class="section-title"><?php echo get_sub_field('testimonial_heading');?></h2>
 					</div>
 				</div>
 
@@ -40,8 +40,8 @@
 																<img src="path/to/default-image.jpg" alt="Default Image" class="img-fluid">
 															<?php endif; ?>
 														</div>
-														<h3 class="font-weight-bold"><?php echo esc_html($client_name); ?></h3>
-														<span class="position d-block mb-3"><?php echo esc_html($client_designation); ?></span>
+														<h3 class="font-weight-bold"><?php echo $client_name; ?></h3>
+														<span class="position d-block mb-3"><?php echo $client_designation; ?></span>
 													</div>
 												</div>
 											</div>

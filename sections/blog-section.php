@@ -3,11 +3,11 @@
 			<div class="container">
 				<div class="row mb-5">
 					<div class="col-md-6">
-						<h2 class="section-title"><?php echo get_field('blog_title');?></h2>
+						<h2 class="section-title"><?php echo get_sub_field('blog_title');?></h2>
 					</div>
 					<div class="col-md-6 text-start text-md-end">
 						<?php 
-							$view_all_post = get_field('view_all_post_link'); 
+							$view_all_post = get_sub_field('view_all_post_link'); 
 
 								if ($view_all_post) : 
 									$view_all_now_url = $view_all_post['url'];
@@ -15,7 +15,7 @@
 									$view_all_now_target = $view_all_post['target'] ? $view_all_post['target'] : '_self';
 								?>
 									<a href="<?php echo esc_url($view_all_now_url); ?>" target="<?php echo esc_attr($view_all_now_target); ?>" class="more">
-									<?php echo esc_html($view_all_now_title); ?>
+									<?php echo $view_all_now_title; ?>
 									</a>
 								<?php endif; ?>
 

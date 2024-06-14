@@ -20,7 +20,7 @@
                                 <?php endif; ?>
                             </div>
                             <div class="pt-3">
-                                <h3><?php echo esc_html($product_title); ?></h3>
+                                <h3><?php echo $product_title; ?></h3>
                                 <p><?php echo $product_desc; ?></p>
                                 <p><a href="<?php echo esc_url($product_link); ?>">Read More</a></p>
                             </div>

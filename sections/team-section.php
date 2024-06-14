@@ -1,10 +1,9 @@
 <!-- Start Team Section -->
 <div class="untree_co-section">
 			<div class="container">
-
 				<div class="row mb-5">
 					<div class="col-lg-5 mx-auto text-center">
-						<h2 class="section-title"><?php echo get_field('team_section_title');?></h2>
+						<h2 class="section-title"><?php echo get_sub_field('team_section_title');?></h2>
 					</div>
 				</div>
 
@@ -21,7 +20,7 @@
     if ($team_members->have_posts()) :
         while ($team_members->have_posts()) : $team_members->the_post();
             $name = get_the_title(); // Get name field from ACF
-            $designation = get_field('team_designation'); // Get designation field from ACF
+            $designation = get_sub_field('team_designation'); // Get designation field from ACF
             $description = get_the_excerpt(); // Get description field from ACF
             $read_more_link = get_permalink(); // Get the post permalink
 

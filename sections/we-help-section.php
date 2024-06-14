@@ -26,8 +26,8 @@
 
 					</div>
 					<div class="col-lg-5 ps-lg-5">
-						<h2 class="section-title mb-4"><?php echo get_field('we_help_sec_title');?></h2>
-						<p><?php echo get_field('we_help_desc');?></p>
+						<h2 class="section-title mb-4"><?php echo get_sub_field('we_help_sec_title');?></h2>
+						<p><?php echo get_sub_field('we_help_desc');?></p>
 						<?php if( have_rows('we_help_list_sec') ): ?>
 								<ul class="list-unstyled custom-list my-4">
 									<?php while( have_rows('we_help_list_sec') ): the_row(); 
@@ -41,7 +41,7 @@
 
 							<p>
 							<?php 
-								$explore_button = get_field('we_help_explore_btn'); 
+								$explore_button = get_sub_field('we_help_explore_btn'); 
 
 									if ($explore_button) : 
 										$explore_now_url = $explore_button['url'];
@@ -49,7 +49,7 @@
 										$explore_now_target = $explore_button['target'] ? $explore_button['target'] : '_self';
 									?>
 									<a href="<?php echo esc_url($explore_now_url); ?>" target="<?php echo esc_attr($explore_now_target); ?>" class="btn">
-										<?php echo esc_html($explore_now_title); ?>
+										<?php echo $explore_now_title; ?>
 									</a>
 									<?php endif; ?>
 									</p>
