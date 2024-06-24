@@ -37,7 +37,7 @@
                             $explore_title = $explore_button['title'];
                             $explore_target = $explore_button['target'] ? $explore_button['target'] : '_self';
                         ?>
-                            <a href="<?php echo esc_url($explore_url); ?>" target="<?php echo esc_attr($explore_target); ?>" class="btn btn-white-outline">
+                            <a href="<?php echo $explore_url; ?>" target="<?php echo esc_attr($explore_target); ?>" class="btn btn-white-outline">
                                 <?php echo $explore_title; ?>
                             </a>
                         <?php endif; ?>
@@ -48,7 +48,7 @@
             <div class="col-lg-7">
                 <div class="hero-img-wrap">
                     <?php if (get_sub_field('banner-image')): ?>
-                        <img src="<?php echo get_sub_field('banner-image', $page_id); ?>" class="img-fluid" alt="<?php echo esc_attr(get_sub_field('banner_title')); ?>">
+                        <img src="<?php echo get_sub_field('banner-image'); ?>" class="img-fluid" alt="<?php echo esc_attr(get_sub_field('banner_title')); ?>">
                     <?php endif; ?>
                 </div>
             </div>

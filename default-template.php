@@ -1,5 +1,5 @@
-<?php /* Template Name: Page With ACF Content */ ?>
-<?php get_header(); 
+<?php /* Template Name: Page With ACF Content */ 
+get_header(); 
 
 $page_id = get_the_ID();
 ?>
@@ -51,6 +51,11 @@ $page_id = get_the_ID();
             // Contact Section
             if (get_row_layout() == 'contact_details'):
                 get_template_part('sections/contact-details');
+            endif;
+
+            // Service full width Section
+            if (get_row_layout() == 'Why_Choose_Us_full_width'):
+                get_template_part('sections/why-choose-us-full-width');
             endif;
 
     endwhile; ?>

@@ -20,7 +20,7 @@
     if ($team_members->have_posts()) :
         while ($team_members->have_posts()) : $team_members->the_post();
             $name = get_the_title(); // Get name field from ACF
-            $designation = get_sub_field('team_designation'); // Get designation field from ACF
+            $designation = get_field('team_designation'); // Get designation field from ACF
             $description = get_the_excerpt(); // Get description field from ACF
             $read_more_link = get_permalink(); // Get the post permalink
 
